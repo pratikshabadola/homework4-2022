@@ -1,0 +1,137 @@
+body {
+    font-family: 'Poppins', serif, Arial, Helvetica, sans-serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color:  #f1f1f1;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.gallery > img {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+
+}
+
+.pricing {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+        
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: column;
+
+}
+
+a:visited {
+    color: blue;
+}
+
+.card > header {
+    background-color: #288088;
+    border: solid 2px #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+
+}
+
+.card {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    flex-basis: 450px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#logo {
+    animation-name: logomove;
+    animation-duration: 5s;
+}
+
+@keyframes logomove {
+    0% {width: 25px; opacity: 0;}
+    100% {width: 475px; opacity: 1;}
+   
+}
+
+@media only screen and (min-width: 900px) {
+
+    header {
+        position: sticky; 
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .card {
+        flex-basis: 250px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pricing {
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .nav_links {
+        flex-direction: row;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #logo {
+        animation: none;
+    }
+}
+
+@media print {
+    body {
+        background-image: none;
+    }
+
+    .nav_links {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .pricing {
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    #gallery {
+        display: none;
+    }
+
+    .gallery {
+        display: none;
+    }
+
+    .card {
+        border: solid 2px #45ADDD;
+        flex-basis: 325px;
+    }
+
+}
