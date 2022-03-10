@@ -73,14 +73,18 @@ a:visited {
    
 }
 
-@media only screen and (min-width: 900px) {
+@media screen and (min-width: 900px) {
 
     header {
-        position: sticky; 
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
+    }
 
+    header:nth-child(2){
+        position: sticky;
+        top: 0;
+        z-index: 5;
     }
 
     .card {
@@ -89,15 +93,10 @@ a:visited {
         align-items: center;
     }
 
-    .pricing {
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-    }
-
     .nav_links {
         flex-direction: row;
     }
+
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -111,13 +110,18 @@ a:visited {
         background-image: none;
     }
 
+    nav {
+        width: 100%;
+    }
+
     .nav_links {
-        justify-content: space-between;
+        display: flex;
+        justify-content: space-around;
         flex-direction: row;
     }
 
     .pricing {
-        align-items: center;
+        align-items: flex-end;
         flex-wrap: nowrap;
     }
 
